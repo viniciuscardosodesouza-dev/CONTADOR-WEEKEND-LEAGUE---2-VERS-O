@@ -1,0 +1,16 @@
+Sequencial | Compara��es: 10 | Tempo: 0.000003s
+Bin�ria | Compara��es: 6 | Tempo: 0.000004s
+Sequencial | Compara��es: 10 | Tempo: 0.000003s
+Bin�ria | Compara��es: 6 | Tempo: 0.000005s
+Sequencial | Compara��es: 10 | Tempo: 0.000003s
+Binaria | Compara��es: 6 | Tempo: 0.000005s
+Sequencial | Compara��es: 10 | Tempo: 0.000006s
+Binaria | Compara��es: 6 | Tempo: 0.000005s
+Sequencial | Compara��es: 10 | Tempo: 0.000003s
+Binaria | Compara��es: 6 | Tempo: 0.000004s
+Sequencial | Compara��es: 10 | Tempo: 0.000006s
+Binaria | Compara��es: 10 | Tempo: 0.000006s
+Sequencial | Compara��es: 10 | Tempo: 0.000006s
+Binaria | Compara��es: 10 | Tempo: 0.000006s
+Sequencial | Compara��es: 10 | Tempo: 0.000005s
+Binaria | Compara��es: 6 | Tempo: 0.000005s
