@@ -1,39 +1,35 @@
-import uuid
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
+from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 
+Base = declarative_base()
 
-class Jogador:
-    def __init__(self, nome):
-        self.id = str(uuid.uuid4())[:8]
-        self.nome = nome
-        self.gols = 0
-        self.assist = 0
+class Jogador(Base):
+    __tablename__ = 'jogadores'
 
-    def atualizar_estatisticas(self, gols=0, assist=0):
-        self.gols += gols
-        self.assist += assist
+    id = Column(String, primary_key=True)
+    nome = Column(String, unique=True, nullable=False)
+    gols = Column(Integer, default=0)
+    assist = Column(Integer, default=0)
 
-    def __repr__(self):
-        return f"{self.id} - {self.nome} | Gols: {self.gols}, Assistências: {self.assist}"
+class WL(Base):
+    __tablename__ = 'wls'
 
+    id = Column(Integer, primary_key=True)
+    partidas = relationship("Partida", back_populates="wl")
 
-class Partida:
-    def __init__(self, id_partida, adversario, placar, resultado):
-        self.id = id_partida
-        self.adversario = adversario
-        self.placar = placar
-        self.resultado = resultado
+class Partida(Base):
+    __tablename__ = 'partidas'
 
-    def __repr__(self):
-        return f"Partida {self.id} vs {self.adversario} | Placar: {self.placar} | Resultado: {self.resultado}"
+    id_partida = Column(Integer, primary_key=True)
+    wl_id = Column(Integer, ForeignKey('wls.id'), primary_key=True)
+    adversario = Column(String)
+    placar = Column(String)
+    resultado = Column(String)
 
+    wl = relationship("WL", back_populates="partidas")
 
-class WL:
-    def __init__(self, id_wl):
-        self.id = id_wl
-        self.partidas = []
+engine = create_engine('sqlite:///sistema_wl_orm.db')
+Base.metadata.create_all(engine)
 
-    def adicionar_partida(self, partida):
-        self.partidas.append(partida)
-
-    def __repr__(self):
-        return
+Session = sessionmaker(bind=engine)
+session = Session()
