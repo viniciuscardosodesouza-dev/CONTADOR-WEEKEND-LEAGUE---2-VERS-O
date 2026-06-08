@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "nome": "Mamardashivili",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 2,
+        "nome": "Dumfries",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 3,
+        "nome": "Van dijk",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 3,
+        "nome": "Hancko",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 4,
+        "nome": "Mendy",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 5,
+        "nome": "Yamal",
+        "gols": 3,
+        "assist": 1
+    },
+    {
+        "id": 6,
+        "nome": "Zubimendi",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 7,
+        "nome": "Bellingham",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 8,
+        "nome": "Raphinha",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 9,
+        "nome": "Gyokeres",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 10,
+        "nome": "Suker",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": 0,
+        "nome": "00",
+        "gols": 0,
+        "assist": 0
+    },
+    {
+        "id": "0bc78e07",
+        "nome": "James",
+        "gols": 0,
+        "assist": 0
+    }
+]

@@ -25,18 +25,18 @@ def busca_binaria(lista, chave, atributo="id"):
         valor = getattr(lista[meio], atributo)
         if valor == chave:
             fim = time.time()
-            salvar_log("Binaria", comparacoes, fim - inicio)
+            salvar_log("Binária", comparacoes, fim - inicio)
             return lista[meio]
         elif valor < chave:
             esquerda = meio + 1
         else:
             direita = meio - 1
     fim = time.time()
-    salvar_log("Binaria", comparacoes, fim - inicio)
+    salvar_log("Binária", comparacoes, fim - inicio)
     return None
 
 
 def salvar_log(tipo_busca, comparacoes, tempo):
-    with open("log.txt", "a") as log:
+    with open("log.txt", "a", encoding="utf-8") as log:
         log.write(
             f"{tipo_busca} | Comparações: {comparacoes} | Tempo: {tempo:.6f}s\n")

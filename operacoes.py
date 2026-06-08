@@ -16,4 +16,4 @@ def registrar_estatisticas(id_jogador, gols, assist, metodo="sequencial"):
         jogador.atualizar_estatisticas(gols, assist)
         print(f"Estatísticas atualizadas: {jogador}")
     else:
-        print("Jogador não encontrado!")
+        print("Jogador não encontrado.")

@@ -1,16 +1,19 @@
+import uuid
+
+
 class Jogador:
-    def __init__(self, id_jogador, nome):
-        self.id = id_jogador
+    def __init__(self, nome):
+        self.id = str(uuid.uuid4())[:8]
         self.nome = nome
         self.gols = 0
         self.assist = 0
 
-    def atualizar_estatisticas(self, gols, assist):
+    def atualizar_estatisticas(self, gols=0, assist=0):
         self.gols += gols
         self.assist += assist
 
     def __repr__(self):
-        return f"{self.id} - {self.nome} | Gols: {self.gols}, Assistencias: {self.assist}"
+        return f"{self.id} - {self.nome} | Gols: {self.gols}, Assistências: {self.assist}"
 
 
 class Partida:
@@ -21,7 +24,7 @@ class Partida:
         self.resultado = resultado
 
     def __repr__(self):
-        return f"{self.id} x {self.adversario} | Placar: {self.placar} | Resultado: {self.resultado}"
+        return f"Partida {self.id} vs {self.adversario} | Placar: {self.placar} | Resultado: {self.resultado}"
 
 
 class WL:
@@ -33,4 +36,4 @@ class WL:
         self.partidas.append(partida)
 
     def __repr__(self):
-        return f"WL {self.id} | Partidas: {len(self.partidas)}"
+        return
